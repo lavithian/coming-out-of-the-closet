@@ -1,0 +1,54 @@
+#banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  margin: 0 auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#banner h1 {
+  margin-bottom: 40px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 69px;
+  font-weight: bold;
+}
+
+#banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.container {
+  text-align: center;
+}
+
+#banner {
+  color: white;
+}
+
+.container p {
+  padding-bottom: 20px;
+}
+
+.btn-home {
+  color: white;
+  text-decoration: none;
+  margin: 4px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 15px 20px;
+  transition: all, 0.2s;
+}
+
+.btn-home:hover {
+
+  box-shadow: 1px 1px 1px grey;
+  transform: translateY(-0.25em);
+  color: #FB6F92;
+  background-color: white;
+}
