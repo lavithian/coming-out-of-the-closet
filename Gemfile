@@ -59,7 +59,7 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 
 gem "faker"
-gem "cloudinary"
+# gem "cloudinary"
 gem "pg_search"
 
 group :development, :test do

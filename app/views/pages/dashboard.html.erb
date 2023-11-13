@@ -9,7 +9,7 @@
       <% current_user.bookings.each do |booking|%>
       <div class="booking-card">
         <div class="col costume-photo">
-          <%= cl_image_tag booking.costume.photo.key, height: 300, width: 300, class: "rounded shadow cos" %>
+          <%= image_tag booking.costume.photo, height: 300, width: 300, class: "rounded shadow cos" %>
         </div>
         <div class="col costume-desc">
           <h4><%= booking.costume.name %></h4>
@@ -44,7 +44,11 @@
   <div class="lendboard">
       <% current_user.costumes.each do |costume| %>
         <div class="image">
-          <%=image_tag costume.photo %>
+          <% if costume&.photo&.attached?  %>
+            <%= image_tag costume.photo, alt: "#{costume.name}" %>
+          <% else %>
+            <%= image_tag "No-Image-Placeholder.png", alt: 'No image available' %>
+          <% end %>
         </div>
         <div class="lend-info">
           <h3><%= costume.name %></h3>

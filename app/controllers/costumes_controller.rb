@@ -52,10 +52,22 @@ class CostumesController < ApplicationController
   end
 
 
+  # def update
+  #   @costume.update(costume_params) # Will raise ActiveModel::ForbiddenAttributesError
+  #   redirect_to costume_path(@costume)
+  # end
+
   def update
-    @costume.update(costume_params) # Will raise ActiveModel::ForbiddenAttributesError
-    redirect_to costume_path(@costume)
+    @costume = Costume.find(params[:id])
+    authorize @costume
+
+    if @costume.update(costume_params)
+      redirect_to costume_path(@costume), notice: 'Costume was successfully updated.'
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
+
 
   def destroy
     @costume = Costume.find(params[:id])

@@ -38,6 +38,7 @@ puts "Created User: Music Mates, Email: music@mates.com, Password: 123456."
       clothing: cos[3],
       user: user
     )
+
     costume.photo.attach(io: File.open(cos[4]), filename: "example", content_type: "image/png")
     costume.save
     puts "Created Costume: #{costume.name}, a #{costume.clothing} for #{costume.user.username}, $#{costume.price}."

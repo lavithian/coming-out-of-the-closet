@@ -2,9 +2,9 @@
 <div class="show-container">
   <div class="show-img">
     <% if @costume.photo.attached?  %>
-      <%= cl_image_tag @costume.photo.key, height: 500, width: 350, class:"rounded shadow cos" %>
+      <%= image_tag @costume.photo, height: 500, width: 350, class:"rounded shadow cos" %>
     <% else %>
-      <%= cl_image_tag "https://cdn-icons-png.flaticon.com/512/1124/1124043.png" %>
+      <%= image_tag "No-Image-Placeholder.png", alt: 'No image available' %>
     <% end %>
   </div>
   <div class="show-details">

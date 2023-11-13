@@ -4,13 +4,13 @@
 </div>
 
 <div class= "upload">
-<%= simple_form_for(@costume), remote: true do |f| %>
-  <% clothing = ["Suits", "Costumes", "Cosplays"] %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :clothing, collection: clothing %>
-  <%= f.input :photo, as: :file, input_html: {multiple: false} %>
-  <%= f.submit id: "upload_button"%>
-<% end %>
+  <%= simple_form_for(@costume, remote: true) do |f| %>
+    <% clothing = ["Suits", "Costumes", "Cosplays"] %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :clothing, collection: clothing %>
+    <%= f.input :photo, as: :file, input_html: {multiple: false} %>
+    <%= f.submit id: "upload_button"%>
+  <% end %>
 </div>
